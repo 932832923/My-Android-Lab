@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="线性布局"
+        android:id="@+id/LineLayout_view">
+    </item>
+
+    <item android:title="表格布局"
+        android:id="@+id/TableLayout_view">
+    </item>
+
+    <item android:title="约束布局1"
+        android:id="@+id/Constraint1_view">
+    </item>
+
+    <item android:title="约束布局2"
+        android:id="@+id/Constraint2_view">
+    </item>
+
+</menu>

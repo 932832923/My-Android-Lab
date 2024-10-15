@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstraintLayoutActivity_2">
+
+    <!-- Space Stations Tabs -->
+    <ImageView
+        android:id="@+id/space_station_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/space_station_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!-- Rocket Tabs -->
+
+    <!-- Rover Tabs -->
+
+    <!-- DCA and MARS Labels -->
+
+    <ImageView
+        android:id="@+id/rocket_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintStart_toEndOf="@id/space_station_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rover_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintStart_toEndOf="@id/rocket_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dca_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/mars_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space_station_icon" />
+
+    <TextView
+        android:id="@+id/mars_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MARS"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintTop_toBottomOf="@id/rocket_icon"
+        app:layout_constraintStart_toEndOf="@id/dca_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Arrow for switching between DCA and MARS -->
+    <ImageView
+        android:id="@+id/double_arrow"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintBottom_toBottomOf="@id/mars_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dca_label" />
+
+    <!-- One Way Switch -->
+
+    <!-- Traveller Count -->
+
+    <TextView
+        android:id="@+id/one_way_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="One Way"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dca_label" />
+
+    <Switch
+        android:id="@+id/one_way_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@id/one_way_label"
+        app:layout_constraintTop_toBottomOf="@id/dca_label" />
+
+    <!-- Galaxy (Center Image) -->
+
+    <TextView
+        android:id="@+id/traveller_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="1 Traveller"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one_way_switch" />
+
+    <ImageView
+        android:id="@+id/galaxy_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/galaxy"
+        app:layout_constraintTop_toBottomOf="@id/traveller_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Depart Button -->
+
+    <!-- 返回按钮 -->
+
+    <Button
+        android:id="@+id/depart_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="DEPART"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/galaxy_icon" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:onClick="goBack"
+        app:layout_constraintTop_toBottomOf="@id/depart_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
